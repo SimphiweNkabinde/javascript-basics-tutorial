@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="js-icon.png">
+    <title>Functions</title>
+</head>
+<body>
+    <!-- side nav -->
+    <div id="mainNav" class="sidenav">
+        <a href="" class="closebtn" onclick="closeNav()">&times</a>
+        <a href="index.html">Home</a>
+        <a href="variables.html">variables</a>
+        <a href="conditional.html">conditional Statements</a>
+        <a href="arraysloops.html">arrays & loops</a>
+        <a href="maps.html">maps</a>
+        <a href="functions.html">functions</a>
+        <a href="events.html">events</a>
+        <a href="jquery.html">jQuery</a>
+    </div>
+
+    <header>
+        <h1><a href="index.html">JavaScript Basics Tutorial</a></h1>
+        <p>A brief overview of the fundementals of JavaScript syntax and structures</p>
+        <!-- nav button -->
+        <div class="navbtn">
+            <button onclick="openNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+
+            <h1 class="intro-title">Functions</h1>
+            <div class="intro-description">
+                <p>
+                    A function is a <strong>stored set of statements that perform some tasks</strong> or does some computation and then return the result to the user.
+                    Once stored the function can then be called whenever it is needed instead of rewriting all those statements. It can also be set 
+                    to take input values.
+                </p>
+                <p>
+                    The idea is to put some commonly or repeatedly done tasks together and make a function so that instead of writing the same code 
+                    again and again for different inputs, we can call that function.
+                </p>
+                <p>
+                    JavaScript has many <strong class="text-secondary">built-in functions</strong> that we can call to perform certain tasks.
+                    We can also create our own <strong class="text-secondary">user-defined functions</strong> in JavaScript using the keyword <em>function</em>. This is the basic syntax to create a function in JavaScript:
+<pre style="overflow-x: scroll; max-width: 570px;"><code>
+function functionName(inputParameter1, inputParameter2, ...) { 
+    //function statements
+}
+
+</code></pre>
+                </p>
+                
+            </div>
+        </section>
+
+        <section class="example-code">
+            <h3>Example</h3>
+            <pre class="example-code-block">
+
+<span class="comment">//this function doubles the input value</span>                
+<span class="keyword">function</span> <span class="function">doubleNumber</span>(number) {
+    <span class="keyword">return</span> number * <span class="number">2</span>;
+}
+
+<span class="comment">//here we call the function</span>
+<span class="function">console</span>.log(doubleNumber(<span class="number">10</span>));  <span class="comment">//outputs 20</span>
+
+            </pre>
+        </section>
+
+        <h4 class="text-center">Javascript has many built-in function for performing various tasks</h4>
+        <section class=""> 
+            <div>
+                <p><span class="">Here are some common built-in functions:</span>
+                <ul>
+                    <li><em>charAt()</em> -  returns a character in a string at the given index</li>
+                    <li><em>indexOf()</em> -   returns the index of a the first occurrence of a character in a string</li>
+                    <li><em>charCodeAt()</em> -  returns the ascii number of the character at the given index in a string</li>
+                    <li><em>fromCharCode()</em> - returns the character of the given ascii number</li>
+                    <li><em>replace()</em> - replaces a matched substring with a new substring</li>
+                    <li><em>split()</em> - splits a string into an array of substrings</li>
+                    <li><em>toUpperCase()</em> - returns the given string all in upper case</li>
+                    <li><em>toLowerCase()</em> - returns the given string in all lower case</li>
+                    <li><em>join()</em> - opposite of split(). Joins all array elements into a string</li>
+                    <li><em>pow()</em> - returns a base to the exponent power</li>
+                    <li><em>min()</em> - returns the smallest valued element</li>
+                    <li><em>max()</em> - returns the largest value element</li>
+                    <li><em>round()</em> - returns a number rounded to the nearest integer</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exercise">
+            <h3>Exercise</h3>
+            <p>Create a function called 'add' that adds 2 numbers and returns the result.</p>
+            <pre class="exercise-code-block">
+
+<input type="text" class="keyword" id="input1"> <span class="function">add</span>(num1, num2) {
+    <span class="keyword">let</span> result = num1 <input type="text" class="text-white sm-width" id="input2">  <input type="text" class="text-white" id="input3">;
+    <span class="keyword">return</span> (<input class="text-white" type="text" id="input4">);
+}
+<!-- correct/incorrect buttons -->
+<button id="correctbtn">&#10004; CORRECT</button> <button id="incorrectbtn">&#10008; INCORRECT</button> <span id="tryAgainMsg">try Again!</span>
+            </pre>
+            <button onclick="exerciseCheck_functions()" class="submit">Submit</button>
+        </section>
+
+    </main>
+
+
+        <div class="toggle-bottom">
+            <div>
+                <a href="maps.html">
+                    <span class="toggle-bottom-text">&nbsp;prev&nbsp;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                    </svg>
+                </a>
+                <span class="toggle-topic">Maps</span> 
+
+            </div>
+            <div>
+                <span class="toggle-topic">events</span>
+                <a href="events.html">
+                    <span class="toggle-bottom-text">&nbsp;next&nbsp;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    <footer>
+        by Simphiwe Nkabinde
+    </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

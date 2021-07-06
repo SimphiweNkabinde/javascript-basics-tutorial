@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="js-icon.png">
+    <title>Variables</title>
+</head>
+<body>
+    <!-- side nav -->
+    <div id="mainNav" class="sidenav">
+        <a href="" class="closebtn" onclick="closeNav()">&times</a>
+        <a href="index.html">Home</a>
+        <a href="variables.html">variables</a>
+        <a href="conditional.html">conditional Statements</a>
+        <a href="arraysloops.html">arrays & loops</a>
+        <a href="maps.html">maps</a>
+        <a href="functions.html">functions</a>
+        <a href="events.html">events</a>
+        <a href="jquery.html">jQuery</a>
+    </div>
+
+    <header>
+        <h1><a href="index.html">JavaScript Basics Tutorial</a></h1>
+        <p>A brief overview of the fundementals of JavaScript syntax and structures</p>
+        <!-- nav button -->
+        <div class="navbtn">
+            <button onclick="openNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1 class="intro-title">Variables</h1>
+            <p class="intro-description">
+                JavaScript variables are <strong>containers for storing data values</strong>.
+                The <code>let</code> keyword is used to define a variable that can be reassigned, and the
+                <code>const</code> keyword to define a variable that cannot be reassigned.
+                All JavaScript variables must be identified with unique names.
+                Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+
+            </p>
+        </section>
+
+        <section class="example-code">
+            <h3>Example</h3>
+            <pre class="example-code-block">
+
+    <span class="keyword">let</span> greeting = <span class="string">"Hello"</span>;     <span class="comment">//'let' means the variable can be reassigned. This a variable of a string datatype</span>
+
+    <span class="keyword">const</span> question = <span class="string">"How are you"</span>;     <span class="comment">//'const' means the variable cannot be reassigned</span>
+
+    <span class="keyword">let</span> num = <span class="number">7</span>;    <span class="comment">//this is a variable of a number datatype</span>
+
+            </pre>
+        </section>
+
+        <section>
+            <div>
+                All JavaScript variables must be identified with <strong>unique names</strong>.
+                Identifiers can be short names (like x and y) or more descriptive names (age, sum, total, volume).
+                The general <span class="text-secondary">rules for constructing variable names</span> are:
+                <ul>
+                    <li>Names can contain letters, digits, underscores, and dollar signs.</li>
+                    <li>Names must begin with a letter</li>
+                    <li>Names can also begin with $ and _ </li>
+                    <li>Names are case sensitive (y and Y are different variables)</li>
+                    <li>Reserved words (like JavaScript keywords) cannot be used as names</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exercise">
+            <h3>Exercise</h3>
+            <p>Follow the instructions below by filling in the missing spaces in the code.</p>
+            <ol>
+                <li>Create a variable called city, and assign it the value joburg</li>
+                <li>create a varibale called age, and assign it the value 22</li>
+            </ol>
+            <pre class="exercise-code-block">
+<span class="comment">//1</span>
+<span class="keyword">let</span> <input class="text-white" type="text" id="input1"> = <span class="string">"</span><input class="string" type="text" id="input2"><span class="string">"</span>;
+
+<span class="comment">//2</span>
+<span class="keyword">let</span> <input class="text-white" type="text" id="input3"> = <input class="number" type="text" id="input4">;
+<!-- correct/incorrect buttons -->
+<button id="correctbtn">&#10004; CORRECT</button> <button id="incorrectbtn">&#10008; INCORRECT</button> <span id="tryAgainMsg">try Again!</span>
+            </pre>
+            <button onclick="exerciseCheck_variables()" class="submit">Submit</button>
+        </section>
+
+    </main>
+
+
+        <div class="toggle-bottom">
+            <div>
+                <a href="index.html">Home</a> 
+            </div>
+            <div>
+                <span class="toggle-topic">Conditional Statements</span>
+                <a href="conditional.html">
+                    <span class="toggle-bottom-text">&nbsp;next&nbsp;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    <footer>
+        by Simphiwe Nkabinde
+    </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="js-icon.png">
+    <title>Events</title>
+</head>
+<body>
+    <!-- side nav -->
+    <div id="mainNav" class="sidenav">
+        <a href="" class="closebtn" onclick="closeNav()">&times</a>
+        <a href="index.html">Home</a>
+        <a href="variables.html">variables</a>
+        <a href="conditional.html">conditional Statements</a>
+        <a href="arraysloops.html">arrays & loops</a>
+        <a href="maps.html">maps</a>
+        <a href="functions.html">functions</a>
+        <a href="events.html">events</a>
+        <a href="jquery.html">jQuery</a>
+    </div>
+
+    <header>
+        <h1><a href="index.html">JavaScript Basics Tutorial</a></h1>
+        <p>A brief overview of the fundementals of JavaScript syntax and structures</p>
+        <!-- nav button -->
+        <div class="navbtn">
+            <button onclick="openNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+
+            <h1 class="intro-title">Events</h1>
+            <div class="intro-description">
+                <p>
+                    HTML DOM events are <strong>"things" that happen to HTML elements</strong> in the Document Object Model. When JavaScript is used in HTML pages, 
+                    JavaScript can "react" on these events. An HTML event can be something the browser does, or something a user does.
+                </p>
+                    Some common events in the DOM manipulattion include:
+                    <ul>
+                        <li><em>onchange</em> - Some HTML element has been modified</li>
+                        <li><em>onclick</em> - An HTML element has been clicked on</li>
+                        <li><em>onmouseover</em> - An HTML element was hovered over</li>
+                        <li><em>onmouseout</em> - Mouse cursor moves off HTML element</li>
+                        <li><em>onkeydown</em> - A keyboard button is pressed</li>
+                        <li><em>onload</em> - The HTML page has finished loading</li>
+                    </ul>
+                <p>
+                    Events are normally used in combination with functions, and the function will only be executed when the event occurs (such as when a user clicks a button).
+                </p>
+            </div>
+        </section>
+
+        <section class="example-code">
+            <h3>Example</h3>
+            <pre class="example-code-block">
+
+<span class="comment"></span>
+&lt;!DOCTYPE html&gt;
+<span class="html">&lt;html&gt;</span>
+<span class="html">&lt;body&gt;</span>
+
+<span class="html">&lt;p id=<span class="string">"demo"</span>&gt;</span>This paragraph's background color will change if the user clicks on it in the browser<span class="html">&lt;/p&gt;</span>
+
+<span class="html">&lt;script&gt;</span>
+<span class="comment">//the 'onclick' event is set to call the changeColor() function</span>
+<span class="function">document</span>.getElementById(<span class="string">"demo"</span>).onclick = <span class="keyword">function</span>(){changeColor()};
+
+<span class="comment">//the changeColor() function sets the chosen element's background to 'red'</span>
+<span class="keyword">function</span> changeColor() {
+    <span class="function">document</span>.getElementById(<span class="string">"demo"</span>).style.background = <span class="string">"red"</span>;
+} 
+<span class="html">&lt;/script&gt;</span>
+
+<span class="html">&lt;/body&gt;</span>
+<span class="html">&lt;/html&gt;</span>
+
+            </pre>
+        </section>
+
+        <section class="exercise">
+            <h3>Exercise</h3>
+            <p>Add the 'onmouseenter' event to the selected element in order to execute myFunction() when the user's mouse moves onto the element</p>
+            <pre class="exercise-code-block">
+
+<span class="function">document</span>.getElementById(<span class="string">"container"</span>).<input type="text" class="text-white lg-width" id="input1"> = <span class="keyword">function</span>(){myFunction()};
+}
+<!-- correct/incorrect buttons -->
+<button id="correctbtn">&#10004; CORRECT</button> <button id="incorrectbtn">&#10008; INCORRECT</button> <span id="tryAgainMsg">try Again!</span>
+            </pre>
+            <button onclick="exerciseCheck_events()" class="submit">Submit</button>
+        </section>
+
+    </main>
+
+
+        <div class="toggle-bottom">
+            <div>
+                <a href="functions.html">
+                    <span class="toggle-bottom-text">&nbsp;prev&nbsp;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                    </svg>
+                </a>
+                <span class="toggle-topic">Functions</span> 
+            </div>
+            <div>
+                <span class="toggle-topic">JQuery</span>
+                <a href="jquery.html">
+                    <span class="toggle-bottom-text">&nbsp;next&nbsp;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    <footer>
+        by Simphiwe Nkabinde
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

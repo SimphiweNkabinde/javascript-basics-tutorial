@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="js-icon.png">
+    <title>Arrays and Loops</title>
+</head>
+<body>
+    <!-- side nav -->
+    <div id="mainNav" class="sidenav">
+        <a href="" class="closebtn" onclick="closeNav()">&times</a>
+        <a href="index.html">Home</a>
+        <a href="variables.html">variables</a>
+        <a href="conditional.html">conditional Statements</a>
+        <a href="arraysloops.html">arrays & loops</a>
+        <a href="maps.html">maps</a>
+        <a href="functions.html">functions</a>
+        <a href="events.html">events</a>
+        <a href="jquery.html">jQuery</a>
+    </div>
+
+    <header>
+        <h1><a href="index.html">JavaScript Basics Tutorial</a></h1>
+        <p>A brief overview of the fundementals of JavaScript syntax and structures</p>
+        <!-- nav button -->
+        <div class="navbtn">
+            <button onclick="openNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1 class="intro-title">Arrays and Loops</h1>
+            <p class="intro-description">
+                <h4>Arrays</h4>
+                <p>
+                    An array is a <strong>variable that can store many values</strong> under a single name.
+                    You can simply use an array literal to create a JavaScript Array: <code><span class="keyword">var</span> array_name = [item1, item2, ...];</code>
+                </p>
+                <p>
+                    You access an array element by referring to the index number:
+                    <code><span class="keyword">var</span> item = array_name[<span class="number">0</span>];</code>
+                </p>
+                <h4>Loops</h4>
+                <p>Loops can be used to iterate through or access elements inside arrays easily. The <em class="text-secondary">Array.forEach()</em> method can also be used to do this.</p>
+                There are different kinds of loops:
+                <ul>
+                    <li><code>for</code> - loops through a block of code a number of times</li>
+                    <li><code>for/of</code> - loops through the values of an iterable object</li>
+                    <li><code>while</code> - loops through a block of code while a specified condition is true</li>
+                    <li><code>do/while</code> - also loops through a block of code while a specified condition is true</li>
+                </ul>
+            </p>
+        </section>
+
+        <section class="example-code">
+            <h3>Example</h3>
+            <pre class="example-code-block">
+
+<span class="keyword">let</span> classMarks = [<span class="number">62</span>,<span class="number">88</span>,<span class="number">70</span>,<span class="number">62</span>,<span class="number">69</span>,<span class="number">85</span>];
+
+<span class="comment">//for loop</span>
+<span class="keyword">for</span> (i=classMarks.length - <span class="number">1</span>; i >= <span class="number">0</span>; i--) {
+    <span class="function">console</span>.log(classMarks[i]);
+}   <span class="comment">//outputs each element of array in reverse order</span>
+
+<span class="comment">//for/of loop</span>
+<span class="keyword">for</span> (<span class="keyword">let</span> number <span class="keyword">of</span> classMarks) {
+    <span class="function">console</span>.log(number);
+}   <span class="comment">//outputs each element</span>
+
+<span class="comment">//forEach() method</span>
+classMarks.forEach(<span class="keyword">function</span>(number) {
+    <span class="function">console</span>.log(number + <span class="number">2</span>)
+});   <span class="comment">//adds 2 to each number and outputs it</span>
+
+<span class="keyword">let</span> counter = <span class="number">0</span>;
+<span class="keyword">let</span> j = <span class="number">0</span>;
+
+<span class="comment">//while loop</span>
+<span class="keyword">while</span> (counter &lt;= <span class="number">4</span>) {
+    <span class="function">console</span>.log(classMarks[j]);
+    counter ++;
+    j++;
+}   <span class="comment">//outputs the first 5 elements in the array</span>
+
+            </pre>
+        </section>
+
+        <h4 class="text-center">Array methods can be used to manipulate or access data stored in an array</h4>
+        <section class=""> 
+            <div>
+                <p><span class="">Here are some basic array methods:</span>
+                <ul>
+                    <li><em>indexOf()</em> -  Searches the array for the given element and returns its position</li>
+                    <li><em>includes()</em> -  Checks if the array contains a given element</li>
+                    <li><em>remove()</em> -  Removes an item from the list</li>
+                    <li><em>pop()</em> -  Removes the last element in the array</li>
+                    <li><em>push()</em> -  Adds an element to the end of the array and returns the new length</li>
+                    <li><em>shift()</em> - Removes the first element in the array</li>
+                    <li><em>sort()</em> - Sorts elements in the array in ascending order</li>
+                    <li><em>splice()</em> - Adds or removes elements in an array</li>
+                    <li><em>reverse()</em> - Reverses the order of elements in the array</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exercise">
+            <h3>Exercise</h3>
+            <p>Complete the statement to output each element of the carsArr Array.</p>
+            <pre class="exercise-code-block">
+
+<span class="keyword">let</span> carsArr = [<span class="string">"BMW"</span>,<span class="string">"Volvo"</span>,<span class="string">"VW"</span>,<span class="string">"Merc"</span>,<span class="string">"Toyota"</span>,<span class="string">"Ford"</span>];
+
+<input class="keyword sm-width" type="text" id="input1"> ( <input class="keyword sm-width" type="text" id="input2"> car <span class="keyword">of</span> <input class="text-white" type="text" id="input3"> ) {
+    <span class="function">console</span>.log(<input class="text-white sm-width" type="text" id="input4">);
+}
+<!-- correct/incorrect buttons -->
+<button id="correctbtn">&#10004; CORRECT</button> <button id="incorrectbtn">&#10008; INCORRECT</button> <span id="tryAgainMsg">try Again!</span>
+            </pre>
+            <button onclick="exerciseCheck_loops()" class="submit">Submit</button>
+        </section>
+
+    </main>
+
+
+        <div class="toggle-bottom">
+            <div>
+                <a href="conditional.html">
+                    <span class="toggle-bottom-text">&nbsp;prev&nbsp;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                    </svg>
+                </a>
+                <span class="toggle-topic">Conditional statements</span> 
+            </div>
+            <div>
+                <span class="toggle-topic">Maps</span>
+                <a href="maps.html">
+                    <span class="toggle-bottom-text">&nbsp;next&nbsp;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    <footer>
+        by Simphiwe Nkabinde
+    </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="script.js"></script>    
+</body>
+</html>

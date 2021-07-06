@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="js-icon.png">
+    <title>JS Tutorial</title>
+</head>
+<body>
+    <!-- side nav -->
+    <div id="mainNav" class="sidenav">
+        <a href="" class="closebtn" onclick="closeNav()">&times</a>
+        <a href="index.html">Home</a>
+        <a href="variables.html">variables</a>
+        <a href="conditional.html">conditional Statements</a>
+        <a href="arraysloops.html">arrays & loops</a>
+        <a href="maps.html">maps</a>
+        <a href="functions.html">functions</a>
+        <a href="events.html">events</a>
+        <a href="jquery.html">jQuery</a>
+    </div>
+
+    <header>
+        <h1><a href="index.html">JavaScript Basics Tutorial</a></h1>
+        <p>A brief overview of the fundementals of JavaScript syntax and structures</p>
+        <!-- nav button -->
+        <div class="navbtn">
+            <button onclick="openNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="intro-title text-progress" style="font-size: 4rem;">Welcome</h1>
+        <section class="intro">
+            <p class="intro-description">
+                Welcome to the JavaScript Basics Tutorial. In these tutorial pages you will learn basic JavaScript concepts and syntax. 
+                There are code examples provided for each section so that you can see how the concepts and syntax is typically written in code.  
+            </p>
+            <p>
+                The information contained in this tutorial is not exhaustive. It simply outlines the basics. For more information and detailed 
+                explanations of the concepts discussed in this tutorial please consult the many available online resources. Here are a few
+                of our favourite:
+
+                <ul class="border-none">
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN Web Docs</a></li>
+                    <li><a href="https://www.w3schools.com/js/" target="_blank">W3Schools</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/javascript-tutorial/" target="_blank">GeeksforGeeks</a></li>
+                    <li><a href="https://learn.jquery.com/" target="_blank">jQuery Learning Center</a></li>
+                </ul>
+            </p>
+
+            <p>
+                Each Section contains an exercise at the end to allow you to put some of the concepts and syntax you will have learned into practice.
+            </p>
+            <h2 class="text-blue">Have Fun Learning!</h2>
+        </section>
+
+
+
+
+    </main>
+
+
+        <div class="toggle-bottom">
+            <div>
+                <a class="d-none" href="index.html">Home</a> 
+            </div>
+            <div>
+                <span class="toggle-topic">Variables</span>
+                <a href="variables.html">
+                    <span class="toggle-bottom-text">&nbsp;START&nbsp;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div>.</div>
+    <footer>
+        <a href="">Github Repo</a>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

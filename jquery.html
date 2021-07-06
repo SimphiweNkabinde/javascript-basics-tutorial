@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="js-icon.png">
+    <title>jQuery</title>
+</head>
+<body>
+    <!-- side nav -->
+    <div id="mainNav" class="sidenav">
+        <a href="" class="closebtn" onclick="closeNav()">&times</a>
+        <a href="index.html">Home</a>
+        <a href="variables.html">variables</a>
+        <a href="conditional.html">conditional Statements</a>
+        <a href="arraysloops.html">arrays & loops</a>
+        <a href="maps.html">maps</a>
+        <a href="functions.html">functions</a>
+        <a href="events.html">events</a>
+        <a href="jquery.html">jQuery</a>
+    </div>
+
+    <header>
+        <h1><a href="index.html">JavaScript Basics Tutorial</a></h1>
+        <p>A brief overview of the fundementals of JavaScript syntax and structures</p>
+        <!-- nav button -->
+        <div class="navbtn">
+            <button onclick="openNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1 class="intro-title">jQuery</h1>
+            <p class="intro-description">
+                jQuery is a fast, small, and feature-rich <strong>JavaScript library</strong>. It makes things like HTML document traversal and manipulation, 
+                event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. 
+                With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript. - <em><a href="https://jquery.com/" target="_blank"  class="comment">jquery.com</a></em>
+            </p>
+            <p>
+                The jQuery syntax is tailor-made for selecting HTML elements and performing some action on the elements.
+                The Basic syntax is: <br> <code>$(selector).action()</code>
+
+                <ul>
+                    <li>A <code>$</code> sign to define/access jQuery</li>
+                    <li>A <code>(selector</code>) to "query (or find)" HTML elements</li>
+                    <li>A jQuery <code>action()</code> to be performed on the element(s)</li>
+                </ul>
+            </p>
+        </section>
+
+        <section>
+            <div>
+                <h3>Selectors:</h3>
+                <p>
+                    jQuery selectors allow you to select and manipulate HTML elements. jQuery selectors are 
+                    <strong>used to find or select HTML elements</strong> based on their name, id, classes, 
+                    types, attributes, values of attributes and much more. It's based on the existing 
+                    CSS Selectors, and in addition, it has some own custom selectors.
+                </p>
+                <h5>Here are some examples:</h5>
+                <pre class="example-code-block">
+
+$(<span class="string">"h1"</span>)             <span class="comment">//element selector</span>
+$(<span class="string">"#mainHeading"</span>)   <span class="comment">//ID selector</span>
+$(<span class="string">".yellow"</span>)        <span class="comment">//class selector</span>
+$(<span class="string">"*"</span>)              <span class="comment">//selects all HTML elements</span>
+$(<span class="keyword">this</span>)            <span class="comment">//selects current element</span>
+$(<span class="string">"button"</span>)         <span class="comment">//selects button element</span>
+$(<span class="string">"[href]"</span>)         <span class="comment">//selects all link based elements</span>
+
+                </pre>
+            </div>
+            <div>
+                <h3>actions:</h3>
+                <p>
+                    JQuery <code>action()</code>'s are jQuery built-in functions that can manipulate, remove, add or create elements. <br>
+                    common <strong class="text-progress">built-in functions</strong> include:
+                </p>
+                <ul>
+                    <li><em>after()</em> - Inserts content after the selected HTML element</li>
+                    <li><em>append()</em> - Inserts content at the end of the selected element</li>
+                    <li><em>before()</em> - Inserts content after the selected HTML element</li>
+                    <li><em>empty()</em> - Removes the child elements from the selected element, but not the element itself</li>
+                    <li><em>prepend()</em> - Inserts content at the beginning of the selected element</li>
+                    <li><em>text()</em> - sets or returns the text content of the selected element</li>
+                    <li><em>val()</em> - Sets or returns the value of a form field</li>
+                    <li><em>remove()</em> - Removes the selected element, including its child elements</li>
+                </ul>
+                <p>Here is an example of a selected element being altered using jQuery:</p>
+                <pre class="example-code-block">
+
+<span class="keyword">let</span> newParagraph = $(<span class="string">"&lt;p&gt;&lt;/p&gt;"</span>).text(<span class="string">"This is a new paragraph."</span>);  <span class="comment">//creates a new paragraph</span>
+
+$(<sapn class="string">"body"</sapn>).append(newParagraph);     <span class="comment">//appends newParagraph to the end of the body element</span>
+
+                </pre>
+            </div>
+
+            <div>
+                <h3>Events and Effects</h3>
+                <p>
+                    An <strong class="text-secondary">event</strong> represents the precise moment when something happens. All the different visitors' actions that a web page can respond to are called events.
+                    jQuery allows us to recognize these events and react to them.
+                </p>
+                <p>Common <strong class="text-progress">DOM events in jQuery</strong>:</p>
+                <div class="d-flex border-secondary">
+                    <ul class="border-none">
+                        <h5>Mouse Events</h5>
+                        <li>click</li>
+                        <li>dblclick (double click)</li>
+                        <li>mouseenter</li>
+                        <li>mouseleave</li>
+                    </ul>
+                    <ul class="border-none">
+                        <h5>keyboard events</h5>
+                        <li>keypress</li>
+                        <li>keydown</li>
+                        <li>keyup</li>
+                    </ul>
+                    <ul class="border-none">
+                        <h5>Form Events</h5>
+                        <li>submit</li>
+                        <li>change</li>
+                        <li>focus</li>
+                        <li>blur</li>
+                    </ul>
+                    <ul class="border-none">
+                        <h5>Document/window events</h5>
+                        <li>load</li>
+                        <li>resize</li>
+                        <li>scroll</li>
+                        <li>unload</li>
+                    </ul>
+                    
+                </div>
+                <p>
+                    jQuery enables us to add effects on a web page using built-in methods. jQuery <strong class="text-secondary">effects</strong> can be categorized into fading, 
+                    sliding, hiding/showing and animation effects.
+                </p>
+                <p>Here are some common <strong class="text-progress">jQuery effects</strong>:</p>
+                <ul>
+                    <li><em>hide()</em> - hides the selected elements</li>
+                    <li><em>show()</em> - shows the selected elements</li>
+                    <li><em>fadeIn()</em> - fades in the selected elements</li>
+                    <li><em>fadeOut()</em> - fades out the selected elements</li>
+                    <li><em>fadeTo()</em> - fades in/out the selected elements to a given capacity</li>
+                    <li><em>slideDown()</em> - slides down (shows) the selected elements</li>
+                    <li><em>slideUp()</em> - slides up (hides) the selected elements</li>
+                    <li><em>slideToggle()</em> - toggles between the slideDown() and slideUp() methods</li>
+                    <li><em>stop()</em> - stops the currrently running animation for tne selected elements</li>
+                    <li><em>toggle()</em> - toggles between the hide() and show() methods</li>
+                </ul>
+                <h3>Example:</h3>
+                <pre class="example-code-block">
+
+<span class="comment">//here the click() event is fired when a user clicks on the selected paragraph element</span>   
+<span class="comment">//the hide() effect is implemented on the current paragraph. The speed input parameter is set to 'slow'</span>                 
+$(<span class="string">"p"</span>).click(<span class="keyword">function</span>(){
+    $(<span class="keyword">this</span>).hide(<span class="string">'slow'</span>);
+});
+
+<span class="comment">//jQuery allows us to chain actions/methods together.
+//this allows us to run multiple jQuery methods on the same element within a single statement:
+</span>
+$(<span class="string">"button"</span>).css(<span class="string">"color"</span>, <span class="string">"blue"</span>).slideDown(<span class="number">500</span>).slideUp(<span class="number">500</span>);
+<span class="comment">// the button element's color will change to blue, then it will slide down in 500ms, then back up in 500ms </span>
+
+                </pre>
+            </div>
+
+            <div>
+                <h3>seperate scripting files</h3>
+                <p>
+                    When icorporating jQuery in your project remember to <strong class="text-progress">include both your scripting file and the jQuery scripting file</strong> so that your code will work:
+                </p>
+                <pre class="example-code-block">
+
+<span class="html">&lt;head&gt;
+    &lt;script&gt; src=<span class="string">"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span>&lt;/script&gt;
+    &lt;script&gt; src=<span class="string">"script.js"</span>&lt;/script&gt;
+&lt;/head&gt;</span>
+<span class="comment">&lt;!-- Used to create a scripting file incorporating jQuery --&gt;</span>
+
+                </pre>
+            </div>
+
+        </section>
+
+
+        <section class="exercise">
+            <h3>Exercise</h3>
+            <p>Insert the relevant jQuery event and effect so that when a user double clicks on the button, the paragraph will toggle between the slideDown() and slideUp() methods.</p>
+            <pre class="exercise-code-block">
+
+$(<span class="string">"button"</span>).<input class="text-white" type="text" id="input1">(<span class="keyword">function</span>(){
+    $(<span class="string">"p"</span>).<input class="text-white lg-width" type="text" id="input2">(<span class="string">"fast"</span>);
+});
+<!-- correct/incorrect buttons -->
+<button id="correctbtn">&#10004; CORRECT</button> <button id="incorrectbtn">&#10008; INCORRECT</button> <span id="tryAgainMsg">try Again!</span>
+            </pre>
+            <button onclick="exerciseCheck_jquery()" class="submit">Submit</button>
+        </section>
+
+    </main>
+
+
+        <div class="toggle-bottom">
+            <div>
+                <a href="events.html">
+                    <span class="toggle-bottom-text">&nbsp;prev&nbsp;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                    </svg>
+                </a>
+                <span class="toggle-topic">Events</span> 
+            </div>
+            <div>
+                <span class="toggle-topic"></span>
+                <a href="" class="d-none">
+                    <span class="toggle-bottom-text">&nbsp;next&nbsp;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    <footer>
+        by Simphiwe Nkabinde
+    </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="js-icon.png">
+    <title>Conditionals Statements</title>
+</head>
+<body>
+    <!-- side nav -->
+    <div id="mainNav" class="sidenav">
+        <a href="" class="closebtn" onclick="closeNav()">&times</a>
+        <a href="index.html">Home</a>
+        <a href="variables.html">variables</a>
+        <a href="conditional.html">conditional Statements</a>
+        <a href="arraysloops.html">arrays & loops</a>
+        <a href="maps.html">maps</a>
+        <a href="functions.html">functions</a>
+        <a href="events.html">events</a>
+        <a href="jquery.html">jQuery</a>
+    </div>
+
+    <header>
+        <h1><a href="index.html">JavaScript Basics Tutorial</a></h1>
+        <p>A brief overview of the fundementals of JavaScript syntax and structures</p>
+        <!-- nav button -->
+        <div class="navbtn">
+            <button onclick="openNav()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1 class="intro-title">Conditional Statements</h1>
+            <p class="intro-description">
+                Conditional statements are used to <strong>perform different actions based on different conditions</strong>.
+                Very often when you write code, you want to perform different actions for different decisions.
+                You can use conditional statements in your code to do this.
+                In JavaScript we have the following conditional statements:
+                <ul>
+                    <li>Use <code>if</code> to specify a block of code to be executed, if a specified condition is true</li>
+                    <li>Use <code>else if</code> to specify a new condition to test, if the first condition is false</li>
+                    <li>Use <code>else</code> to specify a block of code to be executed, if all preceding conditions are false</li>
+                </ul>
+
+            </p>
+        </section>
+
+        <section class="example-code">
+            <h3>Example</h3>
+            <pre class="example-code-block">
+
+<span class="keyword">if</span> (greeting === <span class="string">"hello"</span> && question === <span class="string">"What's the time?"</span>) {
+    <span class="comment">//this block of code is executed if the 1st condition is true</span>
+    <span class="function">console</span>.log(<span class="string">"It is 10 o'clock"</span>);   
+}
+<span class="keyword">else if</span> (greeting === <span class="string">"Hello"</span> || question == <span class="string">"What is the weather like tomorrow?"</span>) {
+    <span class="comment">//this block of code is executed if the 1st condition is false and the 2nd condtion is true</span>
+    <span class="function">console</span>.log(<span>"It will be suuny tomorrow."</span>);
+}
+<span class="keyword">else</span> {
+    <span class="comment">//this block of code is executed if the 1st and 2nd condition are false</span>
+    <span class="function">console</span>.log(<span>"I don't understand the question."</span>)
+}
+
+            </pre>
+        </section>
+
+        <h4 class="text-center">Comparison and Logical operators are used to test for true or false.</h4>
+        <section class="d-flex flex-arnd border-secondary"> 
+            <div>
+                <p><span class="text-secondary">Comparison operators</span>
+                <ul class="border-none">
+                    <li><code>==</code> equal to</li>
+                    <li><code>===</code> equal value and equal type</li>
+                    <li><code>!=</code> not equal</li>
+                    <li><code>!==</code> not equal value or not equal type</li>
+                    <li><code>&gt;</code> greater than</li>
+                    <li><code>&lt;</code> less than</li>
+                    <li><code>&gt;=</code> greater than or equal to</li>
+                    <li><code>&lt;=</code> less than or equal to</li>
+                </ul>
+            </div>
+            <div>
+                <p><span class="text-secondary">Logical operators</span></p>
+                <ul class="border-none">
+                    <li><code>&&</code> and</li>
+                    <li><code>||</code> or</li>
+                    <li><code>!</code> not</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="exercise">
+            <h3>Exercise</h3>
+            <p>Complete the statement to print "Hello World!" if num1 is greater than num 2.</p>
+            <pre class="exercise-code-block">
+
+<span class="keyword">let</span> num1 = <span class="number">20</span>;
+<span class="keyword">let</span> num2 = <span class="number">15</span>;
+
+<span class="keyword">if</span> ( <input class="text-white" type="text" id="input1"> <input class="text-white sm-width" type="text" id="input2"> <input class="text-white" type="text" id="input3"> ) {
+    <span class="function">console</span>.log(<span class="string">"Hello World!"</span>)
+}
+<!-- correct/incorrect buttons -->
+<button id="correctbtn">&#10004; CORRECT</button> <button id="incorrectbtn">&#10008; INCORRECT</button> <span id="tryAgainMsg">try Again!</span>
+            </pre>
+            <button onclick="exerciseCheck_conditionals()" class="submit">Submit</button>
+        </section>
+
+    </main>
+
+
+        <div class="toggle-bottom">
+            <div>
+                <a href="variables.html">
+                    <span class="toggle-bottom-text">&nbsp;prev&nbsp;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                    </svg>
+                </a>
+                <span class="toggle-topic">Variables</span> 
+            </div>
+            <div>
+                <span class="toggle-topic">Arrays & Loops</span>
+                <a href="arraysloops.html">
+                    <span class="toggle-bottom-text">&nbsp;next&nbsp;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    <footer>
+        by Simphiwe Nkabinde
+    </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,374 @@
+.text-color1 {
+  color: #25272a;
+}
+
+.text-progress {
+  color: #009688;
+}
+
+.text-secondary {
+  color: #fbbb19;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-blue {
+  color: #03a9f4;
+}
+
+.bg-secondary {
+  background-color: #fbbb19;
+}
+
+.keyword {
+  color: #fcc28f;
+}
+
+.string {
+  color: #a2fca2;
+}
+
+.comment {
+  color: #888888;
+}
+
+.number {
+  color: #d36363;
+}
+
+.function {
+  color: #ffffaa;
+}
+
+.html {
+  color: #62c8f3;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-btwn {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-arnd {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.flex-even {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.border-none {
+  border: none;
+}
+
+.border-secondary {
+  border: 1px #fbbb19 solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  border: 1px #fbbb19 solid;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+ul li::before {
+  content: "\2022";
+  color: #fbbb19;
+  margin-left: -1em;
+  padding-right: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.border-left {
+  border-left: 1px #fbbb19 solid;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #25272a;
+}
+
+code {
+  background: #e4e4e4;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-radius: 3px;
+  color: #009688;
+  font-size: 1rem;
+  margin: 3px;
+  display: inline-block;
+}
+
+header {
+  background: #fbbb19;
+  text-align: center;
+  padding: 8px;
+  color: #ffffff;
+  -webkit-box-shadow: #888888 0px 0.03px 4px;
+          box-shadow: #888888 0px 0.03px 4px;
+}
+
+header a {
+  color: #ffffff;
+}
+
+.navbtn {
+  text-align: left;
+}
+
+.navbtn button {
+  background: none;
+  border: 3px solid #ffffff;
+  border-radius: 5px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333333;
+  overflow-x: hidden;
+  padding-top: 60px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 2px 0px 5px #0000005d;
+          box-shadow: 2px 0px 5px #0000005d;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #009688;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+main {
+  padding-left: 7%;
+  padding-right: 7%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.intro-title {
+  text-align: center;
+}
+
+.example-code-block, .exercise-code-block {
+  color: #ffffff;
+  border-radius: 3px;
+  padding: 10px;
+  background: #333333;
+  overflow-x: scroll;
+  -webkit-box-shadow: 0.5px -1.5px 8px 3px #c7c7c7;
+          box-shadow: 0.5px -1.5px 8px 3px #c7c7c7;
+  font-size: 0.9rem;
+}
+
+.more-info {
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: #009688;
+  color: #25272a;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.more-info code {
+  color: #d36363;
+}
+
+.exercise .submit, .exercise #correctbtn, .exercise #incorrectbtn {
+  background: #4caf50;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-box-shadow: 0.5px 0.5px 5px #888888;
+          box-shadow: 0.5px 0.5px 5px #888888;
+}
+
+.exercise h3 {
+  color: #009688;
+  font-size: 1.6rem;
+}
+
+#correctbtn {
+  display: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+#incorrectbtn {
+  display: none;
+  background: #f44336 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+#tryAgainMsg {
+  display: none;
+}
+
+.exercise-code-block input {
+  background: #3b3b3b;
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+  width: 60px;
+  margin: 2px;
+  font-family: monospace, Courier;
+}
+
+.exercise-code-block .sm-width {
+  width: 30px !important;
+}
+
+.exercise-code-block .lg-width {
+  width: 90px;
+}
+
+.toggle-bottom svg {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .toggle-bottom svg {
+    display: inline-block;
+  }
+  .toggle-bottom-text {
+    display: none;
+  }
+}
+
+.toggle-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.toggle-bottom a {
+  background: #009688;
+  border: none;
+  font-size: 1.1rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+  color: #ffffff;
+  border-radius: 5px;
+  margin: 5px;
+  -webkit-box-shadow: 0.5px 0.5px 7px 0px #c7c7c7;
+          box-shadow: 0.5px 0.5px 7px 0px #c7c7c7;
+  text-decoration: none;
+}
+
+.toggle-bottom .toggle-topic {
+  color: #888888;
+}
+
+footer {
+  background: #333333;
+  margin-top: 20px 0 0 0;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 10%;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover {
+  color: #03a9f4;
+  -webkit-transition: 00.2s;
+  transition: 00.2s;
+}
+/*# sourceMappingURL=main.css.map */
