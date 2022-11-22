@@ -97,10 +97,19 @@ header {
     text-align: center;
     padding: 8px;
     color: #ffffff;
-    box-shadow: #888888 0px 0.03px 4px;
+    box-shadow: rgb(136 136 136 / 55%) 0px 0.03px 9px 0px;
 
     a {
         color: #ffffff;
+    }
+    h1 {
+        margin: 10px 0;
+        font-size: 3vw;
+    }
+    p {
+        margin: 0;
+        font-size: 3vw;
+        font-weight: 200;
     }
 }
 
@@ -110,9 +119,12 @@ header {
     text-align: left;
     
     button {
-        background: none;
-        border: 3px solid #ffffff;
-        border-radius: 5px;
+        float: left;
+        color: white;
+        background: #333333;
+        box-shadow: #888888 0px 0.03px 4px;
+        border: none;
+        cursor: pointer;
     }
 }
 .sidenav {
@@ -127,6 +139,7 @@ header {
     padding-top: 60px;
     transition: 0.5s;
     box-shadow: 2px 0px 5px #0000005d;
+    overflow-x: hidden;
 
     a {
         padding: 8px 8px 8px 32px;
@@ -135,6 +148,7 @@ header {
         color: #ffffff;
         display: block;
         transition: 0.3s;
+        min-width: 200px;
     }
     a:hover {
         color: $progress;
@@ -146,6 +160,8 @@ header {
         right: 25px;
         font-size: 36px;
         margin-left: 50px;
+        color: white;
+        cursor: pointer;
     }
 }
 @media screen and (max-height: 450px) {
@@ -288,16 +304,13 @@ footer {
     background: #333333;
     margin-top: 20px 0 0 0;
     padding: 15px;
-    color: #ffffff;
+    color: #b3b3b3;
     text-align: center;
     margin-top: 10%;
+    font-size: .8rem;
     
     a {
         text-decoration: none;
         color: inherit;
-    }
-    a:hover {
-        color: #03a9f4;
-        transition: 00.2s;
     }
 }
